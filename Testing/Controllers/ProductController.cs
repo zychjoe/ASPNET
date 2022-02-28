@@ -25,5 +25,12 @@ namespace Testing
             this.repo = repo;
         }
 
+        public IActionResult ViewProduct(int id)
+        {
+            var product = repo.GetProduct(id);
+
+            return View(product);
+        }
+
     }
 }
